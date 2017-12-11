@@ -5,12 +5,17 @@ import { INCREMENT, DECREMENT } from '../actions';
 // of our redux store, along with an action created
 // by our action creator. What does the reducer
 // need to do the count in each case?
+
+// reducers - mutates state, how it goes about changing state
+// part that actually changes state here
 export default (count = 0, action) => {
     switch (action.type) {
         case INCREMENT:
             // Fill in the body of this case
+            return count + 1;
         case DECREMENT:
             // Fill in the body of this case
+            return count - 1;
         default:
             return count;
     }
